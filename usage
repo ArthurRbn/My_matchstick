@@ -1,0 +1,85 @@
+This is a reproduction of the NIM game. Players takes matches and the one who
+takes the last match looses. This program allows you to play against computer.
+Build the binary with make.
+
+./matchstick arg1 arg2
+
+Execute the binary like this where arg1 defines game board's number of line and
+arg2 defines how many matches could be removed each turn.
+arg1 has to be superior to 1 and arg2 has to be a positive number.
+You have to remove at least one match per turn.
+You can remove matches from only one line each turn.
+
+Example :
+
+$ ./matchstick 3 2
+*******
+*  |  *
+* ||| *
+*|||||*
+*******
+
+Your turn:
+Line: 2
+Matches: 2
+Player removed 2 match(es) from line 2
+*******
+*  |  *
+* |   *
+*|||||*
+*******
+
+AI's turn...
+AI removed 1 match(es) from line 3
+*******
+*  |  *
+* |   *
+*|||| *
+*******
+
+Your turn:
+Line: 3
+Matches: 2
+Player removed 2 match(es) from line 3
+*******
+*  |  *
+* |   *
+*||   *
+*******
+
+AI's turn...
+AI removed 1 match(es) from line 3
+*******
+*  |  *
+* |   *
+*|    *
+*******
+
+Your turn:
+Line: 3
+Matches: 1
+Player removed 1 match(es) from line 3
+*******
+*  |  *
+* |   *
+*     *
+*******
+
+AI's turn...
+AI removed 1 match(es) from line 1
+*******
+*     *
+* |   *
+*     *
+*******
+
+Your turn:
+Line: 2
+Matches: 1
+Player removed 1 match(es) from line 2
+*******
+*     *
+*     *
+*     *
+*******
+You lost, too bad...
